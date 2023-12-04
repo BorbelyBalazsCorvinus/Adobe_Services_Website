@@ -42,6 +42,9 @@
                     nyilatkozat: {
                         required: true,
                     },
+                    submitHandler: function (form) {
+                        window.location.href = 'submitted.html';
+                    }
                 },
                 messages: {
                     nev: "A név mező kitöltése kötelező!",
@@ -131,8 +134,7 @@
                         <li>Pro (mindkét csomag egyben) 50€/hó</li>
                 </div>
                 </ul>
-                <form id="urlap" action="submitted.html" method="post" autocomplete="on"
-                    novalidate>
+                <form id="urlap" method="post" autocomplete="on" novalidate>
 
                     A fizetés és a szolgáltatás lemondása egyaránt a bank oldalán történik.<br>Ha ismét elő szeretnél
                     fizetni, azt újbóli regisztrációt követően teheted meg.
