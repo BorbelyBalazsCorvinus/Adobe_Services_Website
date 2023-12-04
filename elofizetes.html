@@ -42,25 +42,25 @@
                     nyilatkozat: {
                         required: true,
                     },
-                    submitHandler: function (form) {
-                        window.location.href = 'submitted.html';
-                    }
+                },
+                submitHandler: function (form) {
+                    window.location.href = 'submitted.html';
                 },
                 messages: {
-                    nev: "A név mező kitöltése kötelező!",
-                    email: "Hibás e-mail cím!",
-                    telefon: "A telefon mező kitöltése kötelező!",
-                    jelszo: {
-                        required: "A jelszó mező kitöltése kötelező!",
-                        minlength: "A jelszó legalább 8 karakter hosszú legyen!",
-                    },
-                    jelszo_ujra: {
-                        required: "A jelszó újra mező kitöltése kötelező!",
-                        minlength: "A jelszó legalább 8 karakter hosszú legyen!",
-                        equalTo: "A két jelszó nem egyezik!"
-                    },
-                    nyilatkozat: "Kérlek fogadd el a nyilatkozatot!",
+                nev: "A név mező kitöltése kötelező!",
+                email: "Hibás e-mail cím!",
+                telefon: "A telefon mező kitöltése kötelező!",
+                jelszo: {
+                    required: "A jelszó mező kitöltése kötelező!",
+                    minlength: "A jelszó legalább 8 karakter hosszú legyen!",
                 },
+                jelszo_ujra: {
+                    required: "A jelszó újra mező kitöltése kötelező!",
+                    minlength: "A jelszó legalább 8 karakter hosszú legyen!",
+                    equalTo: "A két jelszó nem egyezik!"
+                },
+                nyilatkozat: "Kérlek fogadd el a nyilatkozatot!",
+            },
             });
         });
     </script>
