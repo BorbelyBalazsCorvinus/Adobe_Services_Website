@@ -1,5 +1,5 @@
-const hamburger = document.querySelector(".hamburger");
-const kismenu = document.querySelector(".kismenu");
+let hamburger = document.querySelector(".hamburger");
+let kismenu = document.querySelector(".kismenu");
 hamburger.addEventListener("click", megnyit);
 kismenu.addEventListener("click", bezar);
 document.addEventListener("click", function (elem) {
