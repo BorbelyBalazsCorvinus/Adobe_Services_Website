@@ -11,6 +11,56 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/x-icon" href="media/logo/sajatico.ico">
     <title>AdobeXpert - Előfizetés</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="validacio/jquery-validation-1.19.5/dist/jquery.validate.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#myform").validate({
+                rules: {
+                    nev: {
+                        required: true,
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    telefon: {
+                        required: true,
+                        minlength: 4
+                    },
+                    jelszo: {
+                        required: true,
+                        minlength: 8
+                    },
+                    jelszo_ujra: {
+                        required: true,
+                        equalTo: "#jelszo"
+                    },
+                    csomag: {
+                        required: true,
+                    },
+                    nyilatkozat: {
+                        required: true,
+                    },
+                },
+                messages: {
+                    nev: "A név mező kitöltése kötelező!",
+                    email: "Hibás e-mail cím!",
+                    telefon: "A telefon mező kitöltése kötelező!",
+                    jelszo: {
+                        required: "A jelszó mező kitöltése kötelező!",
+                        minlength: "A jelszó legalább 8 karakter hosszú legyen!",
+                    },
+                    jelszo_ujra: {
+                        required: "A jelszó újra mező kitöltése kötelező!",
+                        minlength: "A jelszó legalább 8 karakter hosszú legyen!",
+                        equalTo: "A két jelszó nem egyezik!"
+                    },
+                    nyilatkozat: "Kérlek fogadd el a nyilatkozatot!",
+                },
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -81,29 +131,33 @@
                         <li>Pro (mindkét csomag egyben) 50€/hó</li>
                 </div>
                 </ul>
-                <form method="post">
+                <form id="myform" action="http://szamtud.uni-corvinus.hu/receive.php" method="post" novalidate>
 
                     A fizetés és a szolgáltatás lemondása egyaránt a bank oldalán történik.<br>Ha ismét elő szeretnél
                     fizetni, azt újbóli regisztrációt követően teheted meg.
-                    <label for="nev">Teljes név *</label>
-                    <input class="mezo" type="text" name="nev" required>
-                    <label for="email">E-mail *</label>
-                    <input class="mezo" type="email" name="email" required>
-                    <label for="telefon">Telefon *</label>
-                    <input class="mezo" type="tel" name="telefon" required value="+36">
-                    <label for="jelszo">Jelszó *</label>
-                    <input class="mezo" type="password" name="jelszo" minlength="8" required
-                        placeholder="min. 8 karakter">
-                    <label for="csomag">Választott csomag *</label>
-                    <select name="csomag" required>
+                    <label for="nev">Teljes név*</label>
+                    <input class="mezo" type="text" name="nev" id="nev">
+                    <label for="email">E-mail*</label>
+                    <input class="mezo" type="email" name="email" id="email">
+                    <label for="telefon">Telefon*</label>
+                    <input class="mezo" type="tel" name="telefon" id="telefon" value="+36">
+                    <label for="jelszo">Jelszó*</label>
+                    <input class="mezo" type="password" name="jelszo" id="jelszo" placeholder="min. 8 karakter">
+                    <label for="jelszo_ujra">Jelszó újra*</label>
+                    <input class="mezo" type="password" name="jelszo_ujra" id="jelszo_ujra">
+                    <label for="csomag">Választott csomag*</label>
+                    <select name="csomag" id="csomag">
                         <option value="pro">AdobeXpert+ Pro</option>
                         <option value="creative">AdobeXpert+ Creative</option>
                         <option value="office">AdobeXpert+ Office</option>
                     </select>
-                    <label><input type="checkbox" name="nyilatkozat" required> Elfogadom az ÁSZF-et és az adatvédelmi
-                        nyilatkozatot! *
-                    </label>
-                    <input type="submit" class="gomb" onclick="atiranyit()" value="Regisztráció">
+                    
+                    <label> Elfogadom az ÁSZF-et és az
+                        adatvédelmi
+                        nyilatkozatot!* <input type="checkbox" name="nyilatkozat" id="nyilatkozat">
+                    </label> 
+                    A csillaggal jelölt mezők kitöltése kötelező! <br>
+                    <input type="submit" class="gomb" value="Regisztráció">
                 </form>
             </div>
 
