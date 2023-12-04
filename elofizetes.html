@@ -15,7 +15,7 @@
     <script src="validacio/jquery-validation-1.19.5/dist/jquery.validate.min.js"></script>
     <script>
         $(document).ready(function () {
-            $("#myform").validate({
+            $("#urlap").validate({
                 rules: {
                     nev: {
                         required: true,
@@ -131,7 +131,8 @@
                         <li>Pro (mindkét csomag egyben) 50€/hó</li>
                 </div>
                 </ul>
-                <form id="myform" action="http://szamtud.uni-corvinus.hu/receive.php" method="post" autocomplete="on" novalidate>
+                <form id="urlap" action="http://szamtud.uni-corvinus.hu/receive.php" method="post" autocomplete="on"
+                    novalidate>
 
                     A fizetés és a szolgáltatás lemondása egyaránt a bank oldalán történik.<br>Ha ismét elő szeretnél
                     fizetni, azt újbóli regisztrációt követően teheted meg.
@@ -151,11 +152,11 @@
                         <option value="creative">AdobeXpert+ Creative</option>
                         <option value="office">AdobeXpert+ Office</option>
                     </select>
-                    
+
                     <label> Elfogadom az ÁSZF-et és az
                         adatvédelmi
                         nyilatkozatot!* <input type="checkbox" name="nyilatkozat" id="nyilatkozat">
-                    </label> 
+                    </label>
                     A csillaggal jelölt mezők kitöltése kötelező! <br>
                     <input type="submit" class="gomb" value="Regisztráció">
                 </form>
