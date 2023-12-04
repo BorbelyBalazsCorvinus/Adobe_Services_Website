@@ -1,0 +1,798 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    padding: 0px;
+    margin: 0px;
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    background-image: url('../media/kep/hatter.jpg');
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+
+.container>* {
+    height: fit-content;
+}
+
+header {
+    display: flex;
+    padding: 5px 10px 5px 10px;
+    margin: 0px;
+    background-color: rgba(245, 252, 255, 0.9);
+    color: #747575;
+    font-weight: bold;
+    flex-basis: 100%;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+    justify-content: space-around;
+    z-index: 4;
+}
+
+.sajatlogo {
+    display: block;
+    height: 40px;
+    margin: 0px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.cimdoboz {
+    display: flex;
+    border-radius: 20px;
+    align-items: center;
+}
+
+.cimdoboz .cim {
+    font-size: 1.3rem;
+    text-align: center;
+    text-decoration: none;
+    padding: 8px;
+    color: #2e64f7;
+}
+
+.vonal {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    border-radius: 7px;
+    background-color: #545454;
+}
+
+.hamburger {
+    display: block;
+    cursor: pointer;
+    align-self: center;
+    justify-self: flex-end;
+    margin: 8px;
+}
+
+.nav {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: space-between;
+}
+
+nav ul li a {
+    text-align: center;
+    text-decoration: none;
+    padding: 5px;
+    padding: 0;
+}
+
+.menupont {
+    margin: 10px;
+    list-style-type: none;
+    transition: transform 0.2s ease-out;
+}
+
+.menulink,
+.menulink:visited {
+    font-weight: bold;
+    color: #545454;
+    text-decoration: none;
+}
+
+.menulink:hover,
+.menulink:active,
+.menupont .active {
+    text-underline-offset: 6px;
+    text-decoration: underline;
+}
+
+.menulink:active,
+.menupont .active {
+    color: #2e64f7;
+}
+
+.kismenu {
+    position: fixed;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 0 0 15px 15px;
+    transition: 0.2s ease-out;
+    font-size: 1.4rem;
+    z-index: 3;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    display: none;
+    left: 0;
+}
+
+.kismenu.lenyilt {
+    display: block;
+    top: 57px;
+}
+
+.nagymenu {
+    display: none;
+}
+
+.adobekeret {
+    display: none;
+}
+
+.focikk {
+    display: flex;
+    text-align: justify;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    align-items: center;
+}
+
+.kevertdoboz {
+    display: flex;
+    padding: 0px;
+    justify-content: center;
+    flex-basis: 30%;
+}
+
+.kevertkepek {
+    height: 300px;
+    margin: -50px 0;
+}
+
+.nagykartya {
+    font-size: 1.30rem;
+    text-align: center;
+    padding: 20px;
+}
+
+.kezdolapkartya {
+    margin: 20px;
+}
+
+.kartya {
+    flex-basis: 90%;
+    background-color: rgba(245, 252, 255, 0.75);
+    border-radius: 25px;
+    padding: 15px;
+    overflow: visible;
+    margin: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.80);
+    cursor: default;
+
+}
+
+.video {
+    width: 90%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.80);
+    margin: 10px 0 10px 0;
+}
+
+.keszitolink,
+.keszitolink:active,
+.keszitolink:hover,
+.keszitolink.menulink:visited {
+    text-decoration: none;
+    font-weight: bold;
+    color: #2e64f7;
+}
+
+.vidlist {
+    list-style-type: square;
+}
+
+.vidinfo {
+    margin-top: 10px;
+    border-radius: 25px;
+    background-color: rgba(245, 252, 255, 0.75);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.80);
+    flex-basis: 90%;
+    padding: 15px;
+    cursor: default;
+    margin-bottom: 10px;
+}
+
+.barbie {
+    color: rgb(237, 59, 118);
+    font-weight: bold;
+}
+
+.oppie {
+    color: rgb(12, 2, 128);
+    font-weight: bold;
+}
+
+.kepsor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.hqcckep {
+    border-radius: 25px;
+    width: 90%;
+    margin: 10px 0 10px 0;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.80);
+}
+
+.logo {
+    height: 50px;
+    display: block;
+    float: left;
+    margin-top: -50px;
+}
+
+.kartyacim {
+    padding: 10px;
+    border-radius: 15px;
+    float: left;
+    background-color: rgb(245, 252, 255);
+    margin-top: -50px;
+    font-size: 1.2rem;
+    margin-left: 60px;
+}
+
+.cikk {
+    padding-top: 25px;
+    height: auto;
+}
+
+.blogcim {
+    width: 90%;
+    margin-bottom: 50px;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 15px;
+}
+
+.kepvid {
+    border-radius: 25px;
+    box-shadow: 0 0px 30px rgba(0, 0, 0, 0.20);
+    width: 100%;
+    height: 220px
+}
+
+.videokartya {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-basis: 90%;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.galeriainfo {
+    flex-basis: 90%;
+    margin: 10px 0 10px 0;
+}
+
+.galleria {
+    width: 90%;
+    height: 30vh;
+    margin: auto;
+    margin: 10px 0 20px 0;
+}
+
+.subkartya {
+    flex-basis: 90%;
+    background-color: rgba(245, 252, 255, 0.75);
+    border-radius: 25px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.80);
+    cursor: default;
+}
+
+.funkartya {
+    flex-basis: 90%;
+    background-color: rgba(245, 252, 255, 0.75);
+    border-radius: 25px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.80);
+    cursor: default;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.funkartya .keszitolink {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+#funvid {
+    width: 90%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+form {
+    text-align: center;
+}
+
+.subkartya h2 {
+    margin: 0;
+}
+
+.listasub {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.listasub ul {
+    padding-left: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+input {
+    width: 15px;
+    height: 15px;
+    margin: 5px 0 0 0;
+    border-radius: 10px;
+    padding: 5px;
+    border: 0;
+}
+.mezo {
+    width: 300px;
+    height: 30px;
+    font-size: 1.1rem;
+}
+
+select {
+    width: 300px;
+    height: 30px;
+    font-size: 1.1rem;
+    border: 0;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.gomb {
+    font-weight: bold;
+    background-color: #2e64f7;
+    color: white;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 20px;
+    cursor: pointer;
+    display: inline-block;
+    width: 120px;
+    height: 30px;
+}
+
+footer {
+    color: #545454;
+    font-weight: bold;
+    flex-basis: 100%;
+    align-self: flex-end;
+    margin: 0;
+    font-size: 1.1rem;
+    text-align: center;
+    background-color: #f5faff;
+    padding: 10px;
+    cursor: default;
+    background-color: rgba(245, 252, 255, 0.75);
+}
+
+/*Megjeleno animacio*/
+.hidden {
+    opacity: 0;
+    transition: all 0.7s;
+    filter: blur(5px);
+    transform: translateY(30%);
+    scale: 0.9;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0%);
+    scale: 1;
+}
+
+@media all and (min-width: 768px) {
+    header {
+        padding: 6px;
+        width: 100%;
+    }
+
+    .sajatlogo:hover {
+        transform: rotate(360deg);
+    }
+
+    .nav {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .kismenu.lenyilt {
+        display: none;
+    }
+
+    .logo {
+        margin-top: -65px;
+    }
+
+    .kartyacim {
+        margin-top: -65px;
+    }
+
+    .nagymenu {
+        display: flex;
+        border-radius: 20px;
+        background-color: rgba(245, 252, 255, 0.5);
+        font-size: 1.2rem;
+        padding: 2px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+        margin: 0;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .cimdoboz .cim {
+        display: none;
+    }
+
+    .cimdoboz {
+        transition: transform 0.2s ease-out;
+    }
+
+    .cimdoboz:hover {
+        transform: scale(1.1);
+        rotate: -1deg;
+    }
+
+    .adobekeret {
+        display: flex;
+        align-items: center;
+        transition: transform 0.2s ease-out;
+    }
+
+    .adobekeret:hover {
+        rotate: 1deg;
+        transform: scale(1.1);
+    }
+
+    .adobekeret .cim {
+        font-size: 1.3rem;
+        text-align: center;
+        text-decoration: none;
+        color: #2e64f7;
+    }
+
+    .kartya {
+        transition: transform 0.2s ease-out;
+        padding: 40px;
+        margin: 60px 1% 60px 1%;
+        flex-basis: 95%;
+    }
+
+    .videokartya {
+        flex-basis: 95%;
+        margin: -30px 1% 20px 1%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cikk {
+        margin-top: 50px;
+    }
+
+    .kepvid {
+        width: 100%;
+        height: 500px;
+    }
+
+    .blogcim {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-size: 1.4rem;
+        padding: 15px;
+    }
+
+    .kevertdoboz {
+        display: flex;
+        justify-content: center;
+        flex-basis: 30%;
+    }
+
+    .kevertdoboz:hover {
+        transform: scale(1.1);
+    }
+
+    .kartya:hover,
+    .hqcckep:hover {
+        transform: scale(1.05);
+    }
+
+    .videokartya:hover {
+        transform: scale(1.05);
+    }
+
+    .video:hover,
+    .vidinfo:hover {
+        transform: scale(1.02);
+    }
+
+    .menupont:hover {
+        transform: scale(1.15);
+    }
+
+    .menupont:hover:nth-child(even) {
+        rotate: -2deg;
+    }
+
+    .menupont:hover:nth-child(odd) {
+        rotate: 2deg;
+    }
+
+    .nagykartya {
+        font-size: 1.5rem;
+        text-align: center;
+        padding: 15px;
+        margin: 10px;
+        flex-basis: 90%;
+    }
+
+    .vidinfo {
+        padding-left: 40px;
+        font-size: 1.1rem;
+    }
+
+    .listasub {
+        width: 500px;
+        padding-left: 70px;
+    }
+
+    .hqcckep {
+        display: block;
+        margin: 10px 1% 10px 1%;
+    }
+
+    .kezdolapkartya {
+        display: flex;
+        padding: 10px;
+        margin: 10px 1% 10px 1%;
+        flex-basis: 90%;
+        align-items: center;
+        font-size: 1.1rem;
+    }
+
+    .galeriainfo {
+        flex-basis: 90%;
+        margin: 10px 0 10px 0;
+        font-size: 1.1rem;
+        padding: 10px;
+    }
+
+    .galleria {
+        width: 90%;
+        height: 70vh;
+    }
+
+    .lablecdoboz {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /*Megjeleno animacio*/
+    .hidden {
+        opacity: 0;
+        transition: all 0.7s;
+        filter: blur(5px);
+        transform: translateY(30%);
+        scale: 0.9;
+    }
+
+    .show {
+        opacity: 1;
+        filter: blur(0px);
+        transform: translateY(0%);
+        scale: 1;
+    }
+}
+
+@media all and (min-width: 900px) {
+    .cimdoboz .cim {
+        display: block;
+    }
+
+    .nagykartya {
+        flex-basis: 28%;
+        margin: 10px 0;
+    }
+
+    .cikk {
+        flex-basis: 95%;
+        margin-bottom: 20px;
+        margin-top: 40px;
+    }
+
+    .videokartya {
+        margin-top: 0px;
+        margin-bottom: 20px;
+    }
+
+    .blogcim {
+        margin-bottom: 20px;
+        padding: 15px;
+    }
+
+    .video {
+        width: 90%;
+        margin: 5px;
+        margin-bottom: 0;
+    }
+
+    .hqcckep {
+        display: block;
+        margin: 0 1% 0 1%;
+        height: 300px;
+        object-fit: cover;
+        width: 45.25%
+    }
+
+    .hqcckep:nth-child(odd) {
+        object-position: top;
+    }
+
+    .kezdolapkartya {
+        display: flex;
+        padding: 20px;
+        margin: 20px 1% 20px 1%;
+        height: 300px;
+        align-items: center;
+        flex-basis: 45.25%;
+    }
+
+    .kepsor {
+        display: flex;
+        flex-basis: 97.5%;
+    }
+
+    .kevertdoboz {
+        flex-basis: 34%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .kevertkepek {
+        margin-top: -55px;
+        margin-bottom: -55px;
+        scale: 0.90;
+    }
+
+    .subkartya {
+        padding: 40px;
+        flex-basis: 70%;
+        margin-bottom: 20px;
+    }
+
+    .funkartya {
+        padding: 40px;
+        flex-basis: 50%;
+        margin-bottom: 20px;
+    }
+
+    .galeriainfo {
+        padding: 30px;
+    }
+}
+
+@media all and (min-width: 1300px) {
+    .hqcckep {
+        height: 200px;
+        width: 37%;
+        object-position: 0 -80px;
+    }
+
+    .blogcim {
+        font-size: 1.5rem;
+        padding: 15px;
+    }
+
+    .kezdolapkartya {
+        height: 200px;
+        flex-basis: 53%;
+    }
+
+    .cikk {
+        height: 220px;
+        flex-basis: 65%;
+        margin-left: 0;
+    }
+
+    .cikk:hover {
+        transform: scale(1.02);
+    }
+
+    .videokartya {
+        flex-basis: 20%;
+        margin: 0;
+    }
+
+    .kepvid {
+        height: 220px;
+        width: 385px;
+        margin: 0;
+        margin-top: 20px;
+    }
+
+    #funvid {
+        width: 500px;
+        height: auto;
+    }
+
+    .galleria {
+        width: 89.75%;
+        height: 95vh;
+    }
+}
+
+@media all and (min-width: 1500px) {
+    .focikk {
+        display: flex;
+        justify-content: center;
+    }
+
+    .cikk {
+        flex-basis: 72%;
+        height: 210px;
+    }
+
+    .videokartya {
+        flex-basis: 20%;
+        justify-content: center;
+    }
+
+    .kepvid {
+        height: 210px;
+        width: 375px;
+    }
+}
