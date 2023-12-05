@@ -2,13 +2,19 @@ document.addEventListener('DOMContentLoaded', function () {
     const ertek = document.getElementById('rating');
     ertek.addEventListener('input', function () {
         if(ertek.value==0){
-            ertekeles="Nem tetszik"
+            ertekeles="Nagyon nem tetszik"
         }
         else if(ertek.value==1){
+            ertekeles="Nem tetszik"
+        }
+        else if(ertek.value==2){
             ertekeles="Közömbös"
         }
-        else{
+        else if(ertek.value==3){
             ertekeles="Tetszik"
+        }
+        else{
+            ertekeles="Nagyon tetszik"
         }
         ertek.value;
         document.getElementById('ertekeles').innerText=ertekeles
