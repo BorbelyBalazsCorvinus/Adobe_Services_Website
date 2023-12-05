@@ -39,28 +39,31 @@
                     csomag: {
                         required: true,
                     },
+                    kezdet: {
+                        required: true,
+                    },
                     nyilatkozat: {
                         required: true,
                     },
                 },
-                submitHandler: function (form) {
-                    window.location.href = 'submitted.html';
-                },
                 messages: {
-                nev: "A név mező kitöltése kötelező!",
-                email: "Hibás e-mail cím!",
-                telefon: "A telefon mező kitöltése kötelező!",
-                jelszo: {
-                    required: "A jelszó mező kitöltése kötelező!",
-                    minlength: "A jelszó legalább 8 karakter hosszú legyen!",
+                    nev: "A név mező kitöltése kötelező!",
+                    email: "Hibás e-mail cím!",
+                    telefon: "A telefon mező kitöltése kötelező!",
+                    jelszo: {
+                        required: "A jelszó mező kitöltése kötelező!",
+                        minlength: "A jelszó legalább 8 karakter hosszú legyen!",
+                    },
+                    jelszo_ujra: {
+                        required: "A jelszó újra mező kitöltése kötelező!",
+                        minlength: "A jelszó legalább 8 karakter hosszú legyen!",
+                        equalTo: "A két jelszó nem egyezik!"
+                    },
+                    kezdet: {
+                        required: "Kérlek add meg a kezdeti dátumot!",
+                    },
+                    nyilatkozat: "Kérlek fogadd el a nyilatkozatot!",
                 },
-                jelszo_ujra: {
-                    required: "A jelszó újra mező kitöltése kötelező!",
-                    minlength: "A jelszó legalább 8 karakter hosszú legyen!",
-                    equalTo: "A két jelszó nem egyezik!"
-                },
-                nyilatkozat: "Kérlek fogadd el a nyilatkozatot!",
-            },
             });
         });
     </script>
@@ -134,10 +137,10 @@
                         <li>Pro (mindkét csomag egyben) 50€/hó</li>
                 </div>
                 </ul>
-                <form id="urlap" method="post" autocomplete="on" novalidate>
+                <form id="urlap" action="submitted.html" method="post" autocomplete="on" novalidate>
 
                     A fizetés és a szolgáltatás lemondása egyaránt a bank oldalán történik.<br>Ha ismét elő szeretnél
-                    fizetni, azt újbóli regisztrációt követően teheted meg.
+                    fizetni, újbóli regisztrációt követően teheted meg.
                     <label for="nev">Teljes név*</label>
                     <input class="mezo" type="text" name="nev" id="nev">
                     <label for="email">E-mail*</label>
@@ -154,7 +157,8 @@
                         <option value="creative">AdobeXpert+ Creative</option>
                         <option value="office">AdobeXpert+ Office</option>
                     </select>
-
+                    <label for="kezdet">Előfizetés kezdete*</label>
+                    <input class="mezo" type="date" name="kezdet" id="kezdet">
                     <label> Elfogadom az ÁSZF-et és az
                         adatvédelmi
                         nyilatkozatot!* <input type="checkbox" name="nyilatkozat" id="nyilatkozat">
