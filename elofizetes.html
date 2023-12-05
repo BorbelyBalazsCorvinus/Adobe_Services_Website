@@ -39,12 +39,12 @@
                     csomag: {
                         required: true,
                     },
-                    kezdet: {
-                        required: true,
-                    },
                     nyilatkozat: {
                         required: true,
                     },
+                },
+                submitHandler: function (form) {
+                    window.location.href = 'submitted.html';
                 },
                 messages: {
                     nev: "A név mező kitöltése kötelező!",
@@ -58,9 +58,6 @@
                         required: "A jelszó újra mező kitöltése kötelező!",
                         minlength: "A jelszó legalább 8 karakter hosszú legyen!",
                         equalTo: "A két jelszó nem egyezik!"
-                    },
-                    kezdet: {
-                        required: "Kérlek add meg a kezdeti dátumot!",
                     },
                     nyilatkozat: "Kérlek fogadd el a nyilatkozatot!",
                 },
@@ -157,8 +154,8 @@
                         <option value="creative">AdobeXpert+ Creative</option>
                         <option value="office">AdobeXpert+ Office</option>
                     </select>
-                    <label for="kezdet">Előfizetés kezdete*</label>
-                    <input class="mezo" type="date" name="kezdet" id="kezdet">
+                    <label for="rating">Mennyire vagy elégedett az oldallal?</label>
+                    <input class="mezo" type="range" name="rating" id="rating">
                     <label> Elfogadom az ÁSZF-et és az
                         adatvédelmi
                         nyilatkozatot!* <input type="checkbox" name="nyilatkozat" id="nyilatkozat">
