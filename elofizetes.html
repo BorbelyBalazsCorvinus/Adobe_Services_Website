@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/x-icon" href="media/logo/sajatico.ico">
     <title>AdobeXpert - Előfizetés</title>
+    <script src="js/visszajelzes.js"></script>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="validacio/jquery-validation-1.19.5/dist/jquery.validate.min.js"></script>
     <script>
@@ -135,7 +136,6 @@
                 </div>
                 </ul>
                 <form id="urlap" method="post" autocomplete="on" novalidate>
-
                     A fizetés és a szolgáltatás lemondása egyaránt a bank oldalán történik.<br>Ha ismét elő szeretnél
                     fizetni, újbóli regisztrációt követően teheted meg.
                     <label for="nev">Teljes név*</label>
@@ -154,8 +154,10 @@
                         <option value="creative">AdobeXpert+ Creative</option>
                         <option value="office">AdobeXpert+ Office</option>
                     </select>
-                    <label for="rating">Mennyire vagy elégedett az oldallal?</label>
-                    <input class="mezo" type="range" name="rating" id="rating">
+                    <label for="rating">Mit gondolsz az oldalról?</label>
+                    <b><span id="ertekeles">Tetszik</span></b><br>
+                    <input class="mezo" type="range" name="rating" id="rating" min="0" max="2" value="2">
+                    
                     <label> Elfogadom az ÁSZF-et és az
                         adatvédelmi
                         nyilatkozatot!* <input type="checkbox" name="nyilatkozat" id="nyilatkozat">
