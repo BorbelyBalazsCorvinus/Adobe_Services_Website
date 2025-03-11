@@ -1,4 +1,4 @@
-# Webfejlesztés - Web development
+# Webfejlesztés
 #### *Please scroll down for the English version!*
 
 **Az oldal készítője:** Borbély Balázs  
