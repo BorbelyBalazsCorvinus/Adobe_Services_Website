@@ -1,6 +1,6 @@
-# webfejlesztes
-Az oldal készítője: Borbély Balázs
-URL cím: https://balazsqt.github.io/webfejlesztes-main/
+# Webfejlesztés
+Az oldal készítője: **Borbély Balázs**
+URL cím: https://borbelybalazscorvinus.github.io/adobe_services_website/
 Téma: A leghíresebb Adobe programok hasznát gyakorlatban szemléltető oldal és egy köré épített fantázia-brand.
 Betűtípus: Poppins (https://fonts.googleapis.com/css?family=Poppins)
 
