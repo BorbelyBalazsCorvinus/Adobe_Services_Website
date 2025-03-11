@@ -2,7 +2,7 @@
 #### *Please scroll down for the English version!*
 
 **Az oldal készítője:** Borbély Balázs  
-**URL cím:** [AdobeXpert](https://borbelybalazscorvinus.github.io/Adobe_Services_Website/)
+**URL cím:** [AdobeXpert](https://oacmut.github.io/Adobe_Services_Website/)
 
 ## Téma  
 A leghíresebb Adobe programok hasznát gyakorlatban szemléltető oldal és egy köré épített fantázia-brand.
