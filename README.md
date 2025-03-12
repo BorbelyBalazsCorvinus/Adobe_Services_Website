@@ -9,7 +9,7 @@ A leghíresebb Adobe programok hasznát gyakorlatban szemléltető oldal és egy
 
 ## Betűtípus  
 **Poppins**  
-[Letöltés](https://fonts.googleapis.com/css?family=Poppins)
+[Link](https://fonts.googleapis.com/css?family=Poppins)
 
 > **Megjegyzés:** Az `sajatlogo.png` és `sajatico.ico` fájlokat leszámítva, az oldalon használt összes logó az **Adobe** tulajdonát képezi!
 
@@ -60,7 +60,7 @@ A website demonstrating the practical uses of the most famous Adobe programs, bu
 
 ## Font  
 **Poppins**  
-[Download](https://fonts.googleapis.com/css?family=Poppins)
+[Link](https://fonts.googleapis.com/css?family=Poppins)
 
 > **Note:** Except for `sajatlogo.png` and `sajatico.ico`, all logos used on the website are the property of **Adobe**.
 
